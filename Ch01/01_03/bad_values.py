@@ -1,5 +1,6 @@
 # %%
 import pandas as pd
+#import matplotlib.pyplot as plt
 
 # %%
 df = pd.read_csv('metrics.csv', parse_dates=['time'])
@@ -12,6 +13,7 @@ df.groupby('name').describe()
 df['name'].value_counts()
 
 # %%
+import matplotlib 
 pd.pivot(df, index='time', columns='name').plot(subplots=True)
 
 # %%
